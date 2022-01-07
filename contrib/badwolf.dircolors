@@ -81,11 +81,22 @@ TERM xterm-termite
 # Background color codes:
 # 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
 
+# So the way this works is I've redefined the meaning of colors like red, green etc
+# in alacritty.yml to match the bad wolf theme. So I overwrote some entries to just
+# use those values like 01;31
+# Other entries like 1;38;5;196 seem to be using the closest matching built in color
+# I'm not sure how to set those in alacritty yaml, but they are also pretty close to 
+# 24 badwolf colors, or I dont care about the difference. Red is the main color that 
+# I really prefer the 24 bit version as the 8 bit one is too alarming.
+# You can see in the badwolf.vim, the last number is the 8bit version, so the ones 
+# below do match. Where are these colors defined? Honestly hard to find out but you 
+# search xterm 256 there is a list they seem to come from.
+
 NORMAL 0;38;5;15                # no color code at all
 #FILE 00                        # regular file: use no color at all
 RESET 0                         # reset to "normal" color
-DIR 1;38;5;39                   # directory
-LINK 01;38;5;14                 # symbolic link. (If you set this to 'target' instead of a
+DIR 01;31                   # directory
+LINK 01;35                 # symbolic link. (If you set this to 'target' instead of a
                                 # numerical value, the color is as for the file pointed to.)
 MULTIHARDLINK 00                # regular file with more than one link
 FIFO 40;33                      # pipe
@@ -102,7 +113,7 @@ OTHER_WRITABLE 34;42            # dir that is other-writable (o+w) and not stick
 STICKY 37;44                    # dir with the sticky bit set (+t) and not other-writable
 
 # This is for files with execute permission:
-EXEC 1;38;5;154
+EXEC 1;32
 
 # List any file extensions like '.gz' or '.tar' that you would like ls
 # to colorize below. Put the extension, a space, and the color init string.
@@ -153,55 +164,55 @@ EXEC 1;38;5;154
 .rz 01;38;5;196
 
 # image formats
-.jpg 01;38;5;211
-.jpeg 01;38;5;211
-.gif 01;38;5;211
-.bmp 01;38;5;211
-.pbm 01;38;5;211
-.pgm 01;38;5;211
-.ppm 01;38;5;211
-.tga 01;38;5;211
-.xbm 01;38;5;211
-.xpm 01;38;5;211
-.tif 01;38;5;211
-.tiff 01;38;5;211
-.png 01;38;5;211
-.svg 01;38;5;211
-.svgz 01;38;5;211
-.mng 01;38;5;211
-.pcx 01;38;5;211
-.mov 01;38;5;211
-.mpg 01;38;5;211
-.mpeg 01;38;5;211
-.m2v 01;38;5;211
-.mkv 01;38;5;211
-.webm 01;38;5;211
-.ogm 01;38;5;211
-.mp4 01;38;5;211
-.m4v 01;38;5;211
-.mp4v 01;38;5;211
-.vob 01;38;5;211
-.qt 01;38;5;211
-.nuv 01;38;5;211
-.wmv 01;38;5;211
-.asf 01;38;5;211
-.rm 01;38;5;211
-.rmvb 01;38;5;211
-.flc 01;38;5;211
-.avi 01;38;5;211
-.fli 01;38;5;211
-.flv 01;38;5;211
-.gl 01;38;5;211
-.dl 01;38;5;211
-.xcf 01;38;5;211
-.xwd 01;38;5;211
-.yuv 01;38;5;211
-.cgm 01;38;5;211
-.emf 01;38;5;211
-.axv 01;38;5;211
-.anx 01;38;5;211
-.ogv 01;38;5;211
-.ogx 01;38;5;211
+.jpg  01;35
+.jpeg 01;35
+.gif  01;35
+.bmp  01;35
+.pbm  01;35
+.pgm  01;35
+.ppm  01;35
+.tga  01;35
+.xbm  01;35
+.xpm  01;35
+.tif  01;35
+.tiff 01;35
+.png  01;35
+.svg  01;35
+.svgz 01;35
+.mng  01;35
+.pcx  01;35
+.mov  01;35
+.mpg  01;35
+.mpeg 01;35
+.m2v  01;35
+.mkv  01;35
+.webm 01;35
+.ogm  01;35
+.mp4  01;35
+.m4v  01;35
+.mp4v 01;35
+.vob  01;35
+.qt   01;35
+.nuv  01;35
+.wmv  01;35
+.asf  01;35
+.rm   01;35
+.rmvb 01;35
+.flc  01;35
+.avi  01;35
+.fli  01;35
+.flv  01;35
+.gl   01;35
+.dl   01;35
+.xcf  01;35
+.xwd  01;35
+.yuv  01;35
+.cgm  01;35
+.emf  01;35
+.axv  01;35
+.anx  01;35
+.ogv  01;35
+.ogx  01;35
 
 # audio formats
 .aac 0;38;5;214
