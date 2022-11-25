@@ -62,7 +62,7 @@ let s:bwc.plain = ['f8f6f2', 15]
 
 " Pure and simple.
 let s:bwc.snow = ['ffffff', 15]
-let s:bwc.coal = ['000000', 16]
+let s:bwc.coal = ['141413', 16]
 
 " All of the Gravel colors are based on a brown from Clouds Midnight.
 let s:bwc.brightgravel   = ['d9cec3', 252]
@@ -171,6 +171,53 @@ if exists('g:badwolf_tabline')
 else
     let s:tabline = 'blackgravel'
 endif
+
+" gets the colors working in the vim terminal
+let g:terminal_ansi_colors = [
+            \"#181818", 
+            \"#ff2c4b", 
+            \"#aeee00", 
+            \"#ff9eb8", 
+            \"#f4cf86", 
+            \"#0a9dff", 
+            \"#8cffba", 
+            \"#d8d8d8", 
+            \"#181818",
+            \"#ff2c4b",
+            \"#aeee00",
+            \"#ff9eb8",
+            \"#fade3e",
+            \"#0a9dff",
+            \"#8cffba",
+            \"#d8d8d8"]
+
+"if exists('*term_setansicolors')
+"  let g:terminal_ansi_colors = repeat([0], 16)
+"
+"  let g:terminal_ansi_colors[0] = s:bwc.coal[1]
+"  let g:terminal_ansi_colors[8] = s:bwc.coal[1]
+"
+"  let g:terminal_ansi_colors[1] = s:bwc.taffy[1]
+"  let g:terminal_ansi_colors[9] = s:bwc.taffy[1]
+"
+"  let g:terminal_ansi_colors[2] = s:bwc.lime[1]
+"  let g:terminal_ansi_colors[10] = s:bwc.lime[1]
+"
+"  let g:terminal_ansi_colors[3] = s:bwc.dress[1]
+"  let g:terminal_ansi_colors[11] = s:bwc.dress[1]
+"
+"  let g:terminal_ansi_colors[4] = s:bwc.dirtyblonde[1]
+"  let g:terminal_ansi_colors[12] = s:bwc.dirtyblonde[1]
+"
+"  let g:terminal_ansi_colors[5] = s:bwc.tardis[1]
+"  let g:terminal_ansi_colors[13] = s:bwc.tardis[1]
+"
+"  let g:terminal_ansi_colors[6] = s:bwc.saltwatertaffy[1]
+"  let g:terminal_ansi_colors[14] = s:bwc.saltwatertaffy[1]
+"
+"  let g:terminal_ansi_colors[7] = s:bwc.snow[1]
+"  let g:terminal_ansi_colors[15] = s:bwc.snow[1]
+"endif
 
 " }}}
 
